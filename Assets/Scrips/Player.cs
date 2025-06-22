@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
 
 
 
-        if (collision.gameObject.CompareTag("Nami") && coins >= 10)
+        if (collision.gameObject.CompareTag("Nami") && Input.GetKey(KeyCode.E))
         {
             Dialog.SetActive(true);
         }
@@ -49,6 +49,7 @@ public class Player : MonoBehaviour
 
     public void WIN()
     {
+        if(coins == 10 || coins >= 10)
         Win.SetActive(true);
     }
 
